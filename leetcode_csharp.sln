@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leetcode_csharp", "leetcode_csharp.csproj", "{31543484-5519-402A-AF67-D01B9DDC3CCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leetcode_csharp", "leetcode_csharp\leetcode_csharp.csproj", "{31543484-5519-402A-AF67-D01B9DDC3CCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "..\TwoSum\TwoSum.csproj", "{AB6D4D64-FD2C-4C87-830D-5B68260C4E76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "TwoSum\TwoSum.csproj", "{AB6D4D64-FD2C-4C87-830D-5B68260C4E76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseInteger", "..\ReverseInteger\ReverseInteger.csproj", "{A44152E9-CD24-4EB3-9713-D55B9688A723}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseInteger", "ReverseInteger\ReverseInteger.csproj", "{A44152E9-CD24-4EB3-9713-D55B9688A723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
