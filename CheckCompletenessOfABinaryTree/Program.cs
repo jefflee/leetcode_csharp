@@ -74,17 +74,12 @@ namespace CheckCompletenessOfABinaryTree
             // deal with return value
             bool leftResult = false;
             bool rightResult = false;
-            bool rightSiblingWithChild = node.right != null && (node.right.left != null || node.right.right != null)
+            bool rightRightSiblingWithChild = node.left !=null && node.right != null && (node.right.left != null || node.right.right != null)
                 ? true
                 : false;
-            if (node.left != null && node.right != null)
+            if (node.left != null )
             {
-                leftResult = CheckCompleteTree(node.left, currentTreeHigh + 1, treeHigh, rightSiblingWithChild);
-            }
-
-            if (node.left != null && node.right == null)
-            {
-                leftResult = CheckCompleteTree(node.left, currentTreeHigh + 1, treeHigh, rightSiblingWithChild);
+                leftResult = CheckCompleteTree(node.left, currentTreeHigh + 1, treeHigh, rightRightSiblingWithChild);
             }
 
             if (node.right != null)
