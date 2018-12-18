@@ -22,82 +22,33 @@ namespace CheckCompletenessOfABinaryTree
 
         public static bool IsCompleteTree(TreeNode root)
         {
-            int treeHigh = 0;
-            TreeNode c = root;
-            while (c.left != null)
+            List<ANode> nodes = new List<ANode>();
+            nodes.Add(new ANode(root, 1));
+            int i = 0;
+            while (i < nodes.Count)
             {
-                treeHigh += 1;
-                c = c.left;
+                ANode anode = nodes[i];
+                i += 1;
+                if (anode.node != null)
+                {
+                    nodes.Add(new ANode(anode.node.left, anode.code * 2));
+                    nodes.Add(new ANode(anode.node.right, anode.code * 2 + 1));
+                }
             }
-            // find the high of the tree. (find the most left node.)
-            return CheckCompleteTree(root, 0, treeHigh, null);
+
+            return nodes[i - 1].code == nodes.Count;
         }
 
-        public static bool CheckCompleteTree(TreeNode node, int currentTreeHigh, int treeHigh, bool? hasRightSibling)
-        {
-            if (node.left == null && node.right != null)
-            {
-                return false;
-            }
+        public class ANode
+        {  // Annotated Node
+            public TreeNode node;
+            public int code;
 
-            if (currentTreeHigh == treeHigh && node.left != null)
+            public ANode(TreeNode node, int code)
             {
-                return false;
+                this.node = node;
+                this.code = code;
             }
-
-            if (node.left != null && node.right is null && hasRightSibling == true)
-            {
-                return false;
-            }
-
-            if (node.left == null && node.right == null && (currentTreeHigh > treeHigh || currentTreeHigh < treeHigh - 1))
-            {
-                return false;
-            }
-
-            if (node.left == null && node.right == null && hasRightSibling == true && currentTreeHigh == treeHigh - 1)
-            {
-                return false;
-            }
-
-            if (((node.left == null && node.right != null) || (node.left != null && node.right == null)) && currentTreeHigh != (treeHigh - 1))
-            {
-                return false;
-            }
-
-            //leaf node
-            if (node.left == null && node.right == null)
-            {
-                return true;
-            }
-
-            // deal with return value
-            bool leftResult = false;
-            bool rightResult = false;
-            bool rightRightSiblingWithChild = node.left !=null && node.right != null && (node.right.left != null || node.right.right != null)
-                ? true
-                : false;
-            if (node.left != null )
-            {
-                leftResult = CheckCompleteTree(node.left, currentTreeHigh + 1, treeHigh, rightRightSiblingWithChild);
-            }
-
-            if (node.right != null)
-            {
-                rightResult = CheckCompleteTree(node.right, currentTreeHigh + 1, treeHigh, null);
-            }
-            else
-            {
-                // the node only has left child, it doesn't have right child.
-                rightResult = true;
-            }
-
-            if (leftResult == false || rightResult == false)
-            {
-                return false;
-            }
-
-            return true;
         }
     }
 }
