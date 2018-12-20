@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2003
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leetcode_csharp", "leetcode_csharp\leetcode_csharp.csproj", "{31543484-5519-402A-AF67-D01B9DDC3CCE}"
 EndProject
@@ -14,6 +14,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerifyingAnAlienDictionary", "VerifyingAnAlienDictionary\VerifyingAnAlienDictionary.csproj", "{FB6EF413-3CE8-4CAC-935B-7292C54A63FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckCompletenessOfABinaryTree", "CheckCompletenessOfABinaryTree\CheckCompletenessOfABinaryTree.csproj", "{B629B13E-885C-4EE1-A0F8-2EEA0C0C7479}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeInorderTraversal", "BinaryTreeInorderTraversal\BinaryTreeInorderTraversal.csproj", "{F7056B42-F888-4346-B1FB-FB7A4D6FC062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreePreorderTraversal", "BinaryTreePreorderTraversal\BinaryTreePreorderTraversal.csproj", "{26DBCFF2-D991-4B88-B5A1-527889BCBFE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreePostorderTraversal", "BinaryTreePostorderTraversal\BinaryTreePostorderTraversal.csproj", "{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{B629B13E-885C-4EE1-A0F8-2EEA0C0C7479}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B629B13E-885C-4EE1-A0F8-2EEA0C0C7479}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B629B13E-885C-4EE1-A0F8-2EEA0C0C7479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7056B42-F888-4346-B1FB-FB7A4D6FC062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7056B42-F888-4346-B1FB-FB7A4D6FC062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7056B42-F888-4346-B1FB-FB7A4D6FC062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7056B42-F888-4346-B1FB-FB7A4D6FC062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26DBCFF2-D991-4B88-B5A1-527889BCBFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26DBCFF2-D991-4B88-B5A1-527889BCBFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26DBCFF2-D991-4B88-B5A1-527889BCBFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26DBCFF2-D991-4B88-B5A1-527889BCBFE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,14 +1,4 @@
 leetcode_csharp/.vs/
-leetcode_csharp/obj/
-TwoSum/obj/
-ReverseInteger/obj/
-TwoSum/bin/
-ReverseInteger/bin/
-leetcode_csharp/bin/
 .vs/
-AddTwoNumbers/bin/
-AddTwoNumbers/obj/
-VerifyingAnAlienDictionary/bin/
-VerifyingAnAlienDictionary/obj/
-CheckCompletenessOfABinaryTree/obj/
-CheckCompletenessOfABinaryTree/bin/
+*/bin/*
+*/obj/*
