@@ -8,6 +8,8 @@ namespace BinaryTreePreorderTraversal
 {
     class Program
     {
+        // https://leetcode.com/problems/binary-tree-preorder-traversal/
+
         public class TreeNode
         {
             public int val;
@@ -20,34 +22,53 @@ namespace BinaryTreePreorderTraversal
         {
         }
 
-        public IList<int> PreorderTraversal(TreeNode root)
+        public IList<int> PreorderTraversal_solution1_interation(TreeNode root)
         {
-            if (root == null)
-            {
-                return new List<int>();
-            }
-
             Stack<TreeNode> stack = new Stack<TreeNode>();
-            LinkedList<int> resultList = new LinkedList<int>();
-            
-            stack.Push(root);
-            while (stack.Count > 0)
+            IList<int> resultList = new List<int>();
+
+            TreeNode currentNode = root;
+            while (currentNode != null || stack.Count > 0)
             {
-                TreeNode currentNode = stack.Pop();
-                resultList.AddFirst(currentNode.val);
-
-                if (currentNode.left != null)
+                while (currentNode != null)
                 {
-                    stack.Push(currentNode.left);
+                    resultList.Add(currentNode.val);
+                    stack.Push(currentNode);
+                    currentNode = currentNode.left;
                 }
 
-                if (currentNode.right != null)
-                {
-                    stack.Push(currentNode.right);
-                }
+                currentNode = stack.Pop();
+                currentNode = currentNode.right;
             }
 
-            return resultList.ToList();
+            return resultList;
+        }
+
+        public IList<int> PreorderTraversal_solution2(TreeNode root)
+        {
+            IList<int> resultList = new List<int>();
+
+            if (root != null)
+            {
+                traversalTreeByRecursivelyImpl(root, resultList);
+            }
+
+            return resultList;
+        }
+
+        private void traversalTreeByRecursivelyImpl(TreeNode node, IList<int> resultList)
+        {
+            resultList.Add(node.val);
+
+            if (node.left != null)
+            {
+                traversalTreeByRecursivelyImpl(node.left, resultList);
+            }
+
+            if (node.right != null)
+            {
+                traversalTreeByRecursivelyImpl(node.right, resultList);
+            }
         }
     }
 }

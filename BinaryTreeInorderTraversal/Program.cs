@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,21 +9,27 @@ namespace BinaryTreeInorderTraversal
 {
     class Program
     {
+        // https://leetcode.com/problems/binary-tree-inorder-traversal/
+
         public class TreeNode
         {
             public int val;
             public TreeNode left;
             public TreeNode right;
-            public TreeNode(int x) { val = x; }
+
+            public TreeNode(int x)
+            {
+                val = x;
+            }
         }
 
         static void Main(string[] args)
         {
         }
 
-        public IList<int> InorderTraversal(TreeNode root)
+        public IList<int> InorderTraversal_solution1_interation(TreeNode root)
         {
-            Stack<TreeNode> stack = new Stack<TreeNode>();
+            var stack = new Stack<TreeNode>();
             IList<int> resultList = new List<int>();
 
             TreeNode currentNode = root;
@@ -40,6 +47,33 @@ namespace BinaryTreeInorderTraversal
             }
 
             return resultList;
+        }
+
+        public IList<int> InorderTraversal_solution2(TreeNode root)
+        {
+            IList<int> resultList = new List<int>();
+
+            if (root != null)
+            {
+                traversalTreeByRecursivelyImpl(root, resultList);
+            }
+
+            return resultList;
+        }
+
+        private void traversalTreeByRecursivelyImpl(TreeNode node, IList<int> resultList)
+        {
+            if (node.left != null)
+            {
+                traversalTreeByRecursivelyImpl(node.left, resultList);
+            }
+
+            resultList.Add(node.val);
+
+            if (node.right != null)
+            {
+                traversalTreeByRecursivelyImpl(node.right, resultList);
+            }
         }
     }
 }
