@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreePreorderTraversal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreePostorderTraversal", "BinaryTreePostorderTraversal\BinaryTreePostorderTraversal.csproj", "{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSubstringWithoutRepeatingCharacters", "LongestSubstringWithoutRepeatingCharacters\LongestSubstringWithoutRepeatingCharacters.csproj", "{B4E43A8E-5E0A-480B-A8AC-78AA90692D8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F01995C-D23F-40A6-8960-BDDDDE10AD2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E43A8E-5E0A-480B-A8AC-78AA90692D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E43A8E-5E0A-480B-A8AC-78AA90692D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E43A8E-5E0A-480B-A8AC-78AA90692D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E43A8E-5E0A-480B-A8AC-78AA90692D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
