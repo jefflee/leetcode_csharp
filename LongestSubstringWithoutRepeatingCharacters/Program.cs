@@ -12,16 +12,16 @@ namespace LongestSubstringWithoutRepeatingCharacters
 
         static void Main(string[] args)
         {
-            int r = LengthOfLongestSubstring_sol2_slicingWindow("abcabcbb");
+            int r = LengthOfLongestSubstring_sol3_slicingWindow_optimized("abcabcbb");
             Console.WriteLine(r);  // 3
 
-            r = LengthOfLongestSubstring_sol2_slicingWindow("bbbbb");
+            r = LengthOfLongestSubstring_sol3_slicingWindow_optimized("bbbbb");
             Console.WriteLine(r);  // 1
 
             r = LengthOfLongestSubstring_sol2_slicingWindow("pwwkew");
             Console.WriteLine(r);  // 3
 
-            r = LengthOfLongestSubstring_sol2_slicingWindow("aab");
+            r = LengthOfLongestSubstring_sol3_slicingWindow_optimized("aab");
             Console.WriteLine(r);  // 2
 
         }
@@ -79,6 +79,24 @@ namespace LongestSubstringWithoutRepeatingCharacters
             return maxLength;
         }
 
-        // There is another solution 3.
+        public static int LengthOfLongestSubstring_sol3_slicingWindow_optimized(string s)
+        {
+            Dictionary<char, int> charIndexDic = new Dictionary<char, int>();
+            int maxLength = 0;
+
+            for (int i = 0, j = 0; j < s.Length; j++)
+            {
+                if (charIndexDic.ContainsKey(s[j]))
+                {
+                    i = Math.Max(charIndexDic[s[j]], i);
+
+                }
+
+                charIndexDic[s[j]] = j + 1;
+                maxLength = Math.Max(maxLength, j - i + 1);
+            }
+            return maxLength;
+        }
+
     }
 }
