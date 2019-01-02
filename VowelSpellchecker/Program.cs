@@ -12,9 +12,13 @@ namespace VowelSpellchecker
         static void Main(string[] args)
         {
             string[] wordlist = new[] { "KiTe", "kite", "hare", "Hare", "Hare" };
-            string[] queries = new[] { "kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto" };
+            string[] queries = new[] { "kite", "Kite", "KiTe", "Hare", "HARE"
+                , "Hear", "hear", "keti", "keet", "keto" };
             string[] r = Spellchecker(wordlist, queries);
-            Console.WriteLine(r);
+
+            // ["kite","KiTe","KiTe","Hare","hare","","","KiTe","","KiTe"]
+            Console.WriteLine(String.Join(",", r));
+
         }
 
         public static string[] Spellchecker(string[] wordlist, string[] queries)
@@ -33,7 +37,7 @@ namespace VowelSpellchecker
                     wordSmallCase.Add(lowerWord, word);
                 }
 
-                string deVowelWord = DeVowel(word);
+                string deVowelWord = DeVowel(word.ToLower());
                 if (wordDeVowel.ContainsKey(deVowelWord) == false)
                 {
                     wordDeVowel.Add(deVowelWord, word);
@@ -64,7 +68,7 @@ namespace VowelSpellchecker
                 return wordSmallCase[lower];
             }
 
-            string deVowel = DeVowel(query);
+            string deVowel = DeVowel(query.ToLower());
             if (wordDeVowel.ContainsKey(deVowel))
             {
                 return wordDeVowel[deVowel];
@@ -80,6 +84,7 @@ namespace VowelSpellchecker
             {
                 if (IsVowel(c) == true)
                 {
+                    s.Append('a');
                     continue;
                 }
 
