@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSubstringWithoutRepe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxWidthRamp", "MaxWidthRamp\MaxWidthRamp.csproj", "{8CC5E755-5F4F-4705-839E-BBA586341B60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnivaluedBinaryTree", "UnivaluedBinaryTree\UnivaluedBinaryTree.csproj", "{271BDC61-F935-4DF4-9127-DDD62522DF24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{8CC5E755-5F4F-4705-839E-BBA586341B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CC5E755-5F4F-4705-839E-BBA586341B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CC5E755-5F4F-4705-839E-BBA586341B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{271BDC61-F935-4DF4-9127-DDD62522DF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271BDC61-F935-4DF4-9127-DDD62522DF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271BDC61-F935-4DF4-9127-DDD62522DF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271BDC61-F935-4DF4-9127-DDD62522DF24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
