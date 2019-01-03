@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnivaluedBinaryTree", "Univ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VowelSpellchecker", "VowelSpellchecker\VowelSpellchecker.csproj", "{CC389B15-B6A0-44F3-9561-B10DC11D4DFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersWithSameConsecutiveDifferences", "NumbersWithSameConsecutiveDifferences\NumbersWithSameConsecutiveDifferences.csproj", "{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{CC389B15-B6A0-44F3-9561-B10DC11D4DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC389B15-B6A0-44F3-9561-B10DC11D4DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC389B15-B6A0-44F3-9561-B10DC11D4DFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
