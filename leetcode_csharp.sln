@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leetcode_csharp", "leetcode_csharp\leetcode_csharp.csproj", "{31543484-5519-402A-AF67-D01B9DDC3CCE}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VowelSpellchecker", "VowelSpellchecker\VowelSpellchecker.csproj", "{CC389B15-B6A0-44F3-9561-B10DC11D4DFB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersWithSameConsecutiveDifferences", "NumbersWithSameConsecutiveDifferences\NumbersWithSameConsecutiveDifferences.csproj", "{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NunutTest", "NunutTest\NunutTest.csproj", "{36B1B833-F070-481F-9A7E-F888D42CAC4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B1B833-F070-481F-9A7E-F888D42CAC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B1B833-F070-481F-9A7E-F888D42CAC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B1B833-F070-481F-9A7E-F888D42CAC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B1B833-F070-481F-9A7E-F888D42CAC4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
