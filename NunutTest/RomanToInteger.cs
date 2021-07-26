@@ -2,8 +2,11 @@ using FluentAssertions;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace NunutTest
+namespace NunitTest
 {
+    /// <summary>
+    /// https://leetcode.com/problems/roman-to-integer/
+    /// </summary>
     public class RomanToInteger
     {
         static readonly IDictionary<char, int> romanValueDic = new Dictionary<char, int>()

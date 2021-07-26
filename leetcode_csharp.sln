@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VowelSpellchecker", "VowelS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersWithSameConsecutiveDifferences", "NumbersWithSameConsecutiveDifferences\NumbersWithSameConsecutiveDifferences.csproj", "{1F3E03A5-82CF-4AA9-B88C-95A5E51125B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NunutTest", "NunutTest\NunutTest.csproj", "{36B1B833-F070-481F-9A7E-F888D42CAC4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NunitTest", "NunutTest\NunitTest.csproj", "{36B1B833-F070-481F-9A7E-F888D42CAC4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Innova", "Innova", "{0C81F105-75C0-41E1-B495-290E0F42E177}"
 EndProject
