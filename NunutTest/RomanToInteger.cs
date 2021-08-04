@@ -67,13 +67,14 @@ namespace NunitTest
         {
         }
 
-        [Test]
-        public void Test()
+        [TestCase("III", 3)]
+        [TestCase("IV", 4)]
+        [TestCase("V", 5)]
+        public void Test(string roman, int expectedResult)
         {
             RomanToInteger convert = new RomanToInteger();
-            int val = convert.RomanToInt("III");
-
-            val.Should().Be(3);
+            int val = convert.RomanToInt(roman);
+            val.Should().Be(expectedResult);
         }
     }
 }
