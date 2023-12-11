@@ -62,15 +62,20 @@ internal class ManacherAlgorithm
         // Insert # between each char
         var reformatedString = $"#{string.Join('#', s.ToCharArray())}#";
         var maxPalindrome = reformatedString[..1];
-        var dp = new int[reformatedString.Length];
+        var maxPalindromeLength = 1;
 
         for (var k = 0; k < reformatedString.Length; k++)
         {
-            var left = 1;
-            var right = 1;
-            while (reformatedString[k - left] == reformatedString[k + right])
+            var palindromeLength = 1;
+            while (k - palindromeLength >= 0 && k + palindromeLength <= reformatedString.Length &&
+                   reformatedString[k - palindromeLength] == reformatedString[k + palindromeLength])
             {
-                dp[k]++;
+                palindromeLength++;
+            }
+
+            // Compare with previous result
+            if (palindromeLength)
+            {
             }
         }
 
