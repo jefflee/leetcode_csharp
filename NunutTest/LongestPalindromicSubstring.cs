@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System.Collections;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace NunitTest;
@@ -11,22 +12,14 @@ internal class LongestPalindromicSubstringSolution1
 {
     public string LongestPalindrome(string s)
     {
-        if (s.Length <= 1)
-        {
-            return s;
-        }
+        if (s.Length <= 1) return s;
 
         var maxPalindrome = s[0].ToString();
         for (var k = 0; k < s.Length; k++)
+        for (var o = k + maxPalindrome.Length; o < s.Length; o++)
         {
-            for (var o = k + maxPalindrome.Length; o < s.Length; o++)
-            {
-                var subString = s[k..(o + 1)];
-                if (IsPalindrome(subString) && subString.Length > maxPalindrome.Length)
-                {
-                    maxPalindrome = subString;
-                }
-            }
+            var subString = s[k..(o + 1)];
+            if (IsPalindrome(subString) && subString.Length > maxPalindrome.Length) maxPalindrome = subString;
         }
 
         return maxPalindrome;
@@ -35,12 +28,8 @@ internal class LongestPalindromicSubstringSolution1
     private static bool IsPalindrome(string input)
     {
         for (var k = 0; k < input.Length / 2; k++)
-        {
             if (input[k] != input[^(k + 1)])
-            {
                 return false;
-            }
-        }
 
         return true;
     }
@@ -54,41 +43,37 @@ internal class ManacherAlgorithm
 {
     public string LongestPalindrome(string s)
     {
-        if (s.Length <= 1)
-        {
-            return s;
-        }
+        if (s.Length <= 1) return s;
 
         // Insert # between each char
-        var reformatedString = $"#{string.Join('#', s.ToCharArray())}#";
-        var maxPalindrome = reformatedString[..1];
-        var maxPalindromeLength = 1;
+        var reformattedString = $"#{string.Join('#', s.ToCharArray())}#";
+        var maxPalindrome = reformattedString[..1];
+        var maxPalindromeLength = 0;
 
-        for (var k = 0; k < reformatedString.Length; k++)
+        for (var k = 1; k < reformattedString.Length; k++)
         {
-            var palindromeLength = 1;
-            while (k - palindromeLength >= 0 && k + palindromeLength <= reformatedString.Length &&
-                   reformatedString[k - palindromeLength] == reformatedString[k + palindromeLength])
+            var palindromeLength = maxPalindromeLength;
+            while (k - palindromeLength - 1 >= 0 && k + palindromeLength + 1 < reformattedString.Length &&
+                   reformattedString[k - palindromeLength - 1] == reformattedString[k + palindromeLength + 1])
             {
                 palindromeLength++;
             }
 
             // Compare with previous result
-            if (palindromeLength)
+            if (palindromeLength > maxPalindromeLength)
             {
+                maxPalindromeLength = palindromeLength;
+                maxPalindrome = reformattedString[(k - maxPalindromeLength)..(k + maxPalindromeLength + 1)];
             }
         }
 
-        return reformatedString;
+        return maxPalindrome.Replace("#", string.Empty);
     }
 }
 
 public class LongestPalindromicSubstringTest
 {
-    [TestCase("babad", "bab")]
-    [TestCase("cbbd", "bb")]
-    [TestCase("abc1cba", "abc1cba")]
-    [TestCase("1qaabc1cbazxc", "abc1cba")]
+    [TestCaseSource(typeof(TestCases))]
     public void LongestPalindromicSubstringSolution1Test(string input, string expected)
     {
         var sut = new LongestPalindromicSubstringSolution1();
@@ -96,11 +81,22 @@ public class LongestPalindromicSubstringTest
         output.Should().Be(expected);
     }
 
-    [TestCase("babad", "bab")]
+    [TestCaseSource(typeof(TestCases))]
     public void ManacherAlgorithmTest(string input, string expected)
     {
         var sut = new ManacherAlgorithm();
         var output = sut.LongestPalindrome(input);
         output.Should().Be(expected);
+    }
+}
+
+public class TestCases : IEnumerable
+{
+    public IEnumerator GetEnumerator()
+    {
+        yield return new object[] { "babad", "bab" };
+        yield return new object[] { "cbbd", "bb" };
+        yield return new object[] { "abc1cba", "abc1cba" };
+        yield return new object[] { "1qaabc1cbazxc", "abc1cba" };
     }
 }
