@@ -52,7 +52,7 @@ internal class ManacherAlgorithm
 
         for (var k = 1; k < reformattedString.Length; k++)
         {
-            var palindromeLength = maxPalindromeLength;
+            var palindromeLength = 0;
             while (k - palindromeLength - 1 >= 0 && k + palindromeLength + 1 < reformattedString.Length &&
                    reformattedString[k - palindromeLength - 1] == reformattedString[k + palindromeLength + 1])
             {
