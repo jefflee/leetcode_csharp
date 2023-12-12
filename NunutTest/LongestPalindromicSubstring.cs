@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -43,9 +44,12 @@ internal class ManacherAlgorithm
 {
     public string LongestPalindrome(string s)
     {
-        if (s.Length <= 1) return s;
+        if (s.Length <= 1)
+        {
+            return s;
+        }
 
-        // Insert # between each char
+        // Insert # between each char, then the array length is odd.
         var reformattedString = $"#{string.Join('#', s.ToCharArray())}#";
         var maxPalindrome = reformattedString[..1];
         var maxPalindromeLength = 0;
@@ -71,6 +75,51 @@ internal class ManacherAlgorithm
     }
 }
 
+/// <summary>
+///     https://leetcode.com/problems/longest-palindromic-substring/editorial/
+///     https://leetcode.com/problems/longest-palindromic-substring/solutions/4212564/beats-96-49-5-different-approaches-brute-force-eac-dp-ma-recursion/
+/// </summary>
+internal class DynamicProgramming
+{
+    public string LongestPalindrome(string s)
+    {
+        var dp = new bool[s.Length, s.Length];
+        var ans = new List<int> { 0, 0 };
+
+        for (var k = 0; k < s.Length; k++)
+        {
+            // set s[k,k] to true, because substring s[k] is Palindrome
+            dp[k, k] = true;
+
+            // For string length is even.
+            // Check s[k] s[k+1], if they are the same.
+            if (k + 1 < s.Length && s[k] == s[k + 1])
+            {
+                dp[k, k + 1] = true;
+                ans[0] = k;
+                ans[1] = k + 1;
+            }
+        }
+
+        for (var i = 0; i < s.Length; i++)
+        {
+            for (var j = i + 2; j < s.Length; j++)
+            {
+                // The most importance of DP.
+                // if the outer char is the same and its inner substring is Palindrome
+                if (s[i] == s[j] && dp[i + 1, j - 1])
+                {
+                    dp[i, j] = true;
+                    ans[0] = i;
+                    ans[1] = j;
+                }
+            }
+        }
+
+        return s[ans[0]..(ans[1] + 1)];
+    }
+}
+
 public class LongestPalindromicSubstringTest
 {
     [TestCaseSource(typeof(TestCases))]
@@ -85,6 +134,14 @@ public class LongestPalindromicSubstringTest
     public void ManacherAlgorithmTest(string input, string expected)
     {
         var sut = new ManacherAlgorithm();
+        var output = sut.LongestPalindrome(input);
+        output.Should().Be(expected);
+    }
+
+    [TestCaseSource(typeof(TestCases))]
+    public void DynamicProgrammingTest(string input, string expected)
+    {
+        var sut = new DynamicProgramming();
         var output = sut.LongestPalindrome(input);
         output.Should().Be(expected);
     }
