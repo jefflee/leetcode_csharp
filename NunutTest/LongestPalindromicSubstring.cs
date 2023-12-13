@@ -101,10 +101,12 @@ internal class DynamicProgramming
             }
         }
 
-        for (var i = 0; i < s.Length; i++)
+        // string from palindromeLength 2
+        for (var palindromeLength = 2; palindromeLength < s.Length; palindromeLength++)
         {
-            for (var j = i + 2; j < s.Length; j++)
+            for (var i = 0; i < s.Length - palindromeLength; i++)
             {
+                var j = i + palindromeLength;
                 // The most importance of DP.
                 // if the outer char is the same and its inner substring is Palindrome
                 if (s[i] == s[j] && dp[i + 1, j - 1])
@@ -123,27 +125,27 @@ internal class DynamicProgramming
 public class LongestPalindromicSubstringTest
 {
     [TestCaseSource(typeof(TestCases))]
-    public void LongestPalindromicSubstringSolution1Test(string input, string expected)
+    public void LongestPalindromicSubstringSolution1Test(string input, string expected1, string? expected2)
     {
         var sut = new LongestPalindromicSubstringSolution1();
         var output = sut.LongestPalindrome(input);
-        output.Should().Be(expected);
+        output.Should().BeOneOf(expected1, expected2);
     }
 
     [TestCaseSource(typeof(TestCases))]
-    public void ManacherAlgorithmTest(string input, string expected)
+    public void ManacherAlgorithmTest(string input, string expected1, string? expected2)
     {
         var sut = new ManacherAlgorithm();
         var output = sut.LongestPalindrome(input);
-        output.Should().Be(expected);
+        output.Should().BeOneOf(expected1, expected2);
     }
 
     [TestCaseSource(typeof(TestCases))]
-    public void DynamicProgrammingTest(string input, string expected)
+    public void DynamicProgrammingTest(string input, string expected1, string? expected2)
     {
         var sut = new DynamicProgramming();
         var output = sut.LongestPalindrome(input);
-        output.Should().Be(expected);
+        output.Should().BeOneOf(expected1, expected2);
     }
 }
 
@@ -151,9 +153,10 @@ public class TestCases : IEnumerable
 {
     public IEnumerator GetEnumerator()
     {
-        yield return new object[] { "babad", "bab" };
-        yield return new object[] { "cbbd", "bb" };
-        yield return new object[] { "abc1cba", "abc1cba" };
-        yield return new object[] { "1qaabc1cbazxc", "abc1cba" };
+        yield return new object[] { "babad", "bab", "aba" };
+        yield return new object[] { "cbbd", "bb", null };
+        yield return new object[] { "aaaaa", "aaaaa", null };
+        yield return new object[] { "abc1cba", "abc1cba", null };
+        yield return new object[] { "1qaabc1cbazxc", "abc1cba", null };
     }
 }
