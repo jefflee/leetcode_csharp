@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace NunitTest;
+namespace LeetCodeNUnitTest;
 
 /// <summary>
 ///     https://leetcode.com/problems/longest-palindromic-substring/description/

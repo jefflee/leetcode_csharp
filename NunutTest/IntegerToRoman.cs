@@ -1,16 +1,16 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
 
-namespace NunitTest
+namespace LeetCodeNUnitTest
 {
     /// <summary>
-    /// https://leetcode.com/problems/integer-to-roman/
+    ///     https://leetcode.com/problems/integer-to-roman/
     /// </summary>
     public class IntegertoRoman
     {
         public string IntToRoman(int num)
         {
-            string result = string.Empty;
+            var result = string.Empty;
 
             do
             {
@@ -85,14 +85,14 @@ namespace NunitTest
         }
     }
 
-    public class IntegertoRomanTests
+    public class IntegerToRomanTests
     {
         [TestCase(3, "III")]
         [TestCase(4, "IV")]
         public void Test(int num, string roman)
         {
-            IntegertoRoman convert = new IntegertoRoman();
-            string val = convert.IntToRoman(num);
+            var convert = new IntegertoRoman();
+            var val = convert.IntToRoman(num);
 
             val.Should().Be(roman);
         }
