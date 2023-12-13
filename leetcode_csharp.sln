@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCodeNUnitTest", "NunutT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Innova", "Innova", "{0C81F105-75C0-41E1-B495-290E0F42E177}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRankUNitTest", "HackerRankUNitTest\HackerRankUNitTest.csproj", "{73C9C913-4586-4672-A719-800FE617EE4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{36B1B833-F070-481F-9A7E-F888D42CAC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36B1B833-F070-481F-9A7E-F888D42CAC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36B1B833-F070-481F-9A7E-F888D42CAC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C9C913-4586-4672-A719-800FE617EE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C9C913-4586-4672-A719-800FE617EE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C9C913-4586-4672-A719-800FE617EE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C9C913-4586-4672-A719-800FE617EE4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
