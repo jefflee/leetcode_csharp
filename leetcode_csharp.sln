@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leetcode_csharp", "leetcode_csharp\leetcode_csharp.csproj", "{31543484-5519-402A-AF67-D01B9DDC3CCE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "TwoSum\TwoSum.csproj", "{AB6D4D64-FD2C-4C87-830D-5B68260C4E76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseInteger", "ReverseInteger\ReverseInteger.csproj", "{A44152E9-CD24-4EB3-9713-D55B9688A723}"
@@ -37,16 +35,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Innova", "Innova", "{0C81F1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRankUNitTest", "HackerRankUNitTest\HackerRankUNitTest.csproj", "{73C9C913-4586-4672-A719-800FE617EE4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{31543484-5519-402A-AF67-D01B9DDC3CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31543484-5519-402A-AF67-D01B9DDC3CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31543484-5519-402A-AF67-D01B9DDC3CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31543484-5519-402A-AF67-D01B9DDC3CCE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AB6D4D64-FD2C-4C87-830D-5B68260C4E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AB6D4D64-FD2C-4C87-830D-5B68260C4E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB6D4D64-FD2C-4C87-830D-5B68260C4E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -107,6 +103,10 @@ Global
 		{73C9C913-4586-4672-A719-800FE617EE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73C9C913-4586-4672-A719-800FE617EE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73C9C913-4586-4672-A719-800FE617EE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
