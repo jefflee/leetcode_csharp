@@ -48,6 +48,6 @@ public class ClimbingStairsTest
     {
         var sut = new ClimbingStairsSolution();
         var output = sut.ClimbStairs(nStairs);
-        output.Should().BeOneOf(nStairs, numOfWays);
+        output.Should().Be(numOfWays);
     }
 }

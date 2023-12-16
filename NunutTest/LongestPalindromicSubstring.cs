@@ -153,10 +153,10 @@ public class TestCases : IEnumerable
 {
     public IEnumerator GetEnumerator()
     {
-        yield return new object[] { "babad", "bab", "aba" };
-        yield return new object[] { "cbbd", "bb", null };
-        yield return new object[] { "aaaaa", "aaaaa", null };
-        yield return new object[] { "abc1cba", "abc1cba", null };
-        yield return new object[] { "1qaabc1cbazxc", "abc1cba", null };
+        yield return new object?[] { "babad", "bab", "aba" };
+        yield return new object?[] { "cbbd", "bb", null };
+        yield return new object?[] { "aaaaa", "aaaaa", null };
+        yield return new object?[] { "abc1cba", "abc1cba", null };
+        yield return new object?[] { "1qaabc1cbazxc", "abc1cba", null };
     }
 }
