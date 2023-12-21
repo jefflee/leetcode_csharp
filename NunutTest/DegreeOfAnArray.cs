@@ -73,11 +73,6 @@ internal class DegreeOfAnArrayLinqSolution
             .ThenBy(p => p.Length)
             .Select(p => p.Length);
 
-
-        //var result = nums.GroupBy(p => p).OrderByDescending(p => p.Count())
-        //    .ThenBy(p => p.Last() - p.First() + 1)
-        //    .First();
-
         return result.First();
     }
 }
