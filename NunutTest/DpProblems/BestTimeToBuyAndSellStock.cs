@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 
-namespace LeetCodeNUnitTest;
+namespace LeetCodeNUnitTest.DpProblems;
 
 /// <summary>
-///     121. Best Time to Buy and Sell Stock
 ///     https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/?envType=study-plan-v2&amp;
 ///     envId=top-interview-150
 ///     Solutions:
