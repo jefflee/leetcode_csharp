@@ -25,9 +25,9 @@ namespace TwoSum
             for (var k = 0; k < nums.Length; k++)
             {
                 var complement = target - nums[k];
-                if (dic.ContainsKey(complement))
+                if (dic.TryGetValue(complement, out var complementIndex))
                 {
-                    return new[] { dic[complement], k };
+                    return new[] { complementIndex, k };
                 }
 
                 dic[nums[k]] = k;
