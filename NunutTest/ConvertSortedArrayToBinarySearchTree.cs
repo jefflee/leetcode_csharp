@@ -11,13 +11,13 @@ namespace LeetCodeNUnitTest;
 /// </summary>
 internal class ConvertSortedArrayToBinarySearchTreeSolution
 {
-    public TreeNode SortedArrayToBST(int[] nums)
+    public TreeNode? SortedArrayToBST(int[] nums)
     {
         var bstTree = MakeBst(nums, 0, nums.Length - 1);
         return bstTree;
     }
 
-    private TreeNode MakeBst(int[] nums, int start, int end)
+    private TreeNode? MakeBst(int[] nums, int start, int end)
     {
         if (start > end)
         {
@@ -46,7 +46,22 @@ internal class ConvertSortedArrayToBinarySearchTreeTest
     {
         var sut = new ConvertSortedArrayToBinarySearchTreeSolution();
         var tree = sut.SortedArrayToBST(nums);
-        tree.Should().BeOneOf(expected1, expected2);
+        var isEquivalentToExpected1 = Evaluate(() => tree.Should().BeEquivalentTo(expected1));
+        var isEquivalentToExpected2 = Evaluate(() => tree.Should().BeEquivalentTo(expected2));
+        (isEquivalentToExpected1 || isEquivalentToExpected2).Should().BeTrue();
+    }
+
+    private bool Evaluate(Action a)
+    {
+        try
+        {
+            a();
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     public class TestCases : IEnumerable
@@ -70,12 +85,12 @@ internal class ConvertSortedArrayToBinarySearchTreeTest
                         new TreeNode(9)))
             };
 
-            //yield return new object?[]
-            //{
-            //    new int?[] { 1, 3 },
-            //    new int?[] { 1, null, 3 },
-            //    new int?[] { 3, 1 }
-            //};
+            yield return new object?[]
+            {
+                new[] { 1, 3 },
+                new TreeNode(3, new TreeNode(1)),
+                new TreeNode(1, null, new TreeNode(3))
+            };
         }
     }
 }
