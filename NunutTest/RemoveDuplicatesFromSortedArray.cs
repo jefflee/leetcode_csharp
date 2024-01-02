@@ -3,8 +3,7 @@
 namespace LeetCodeNUnitTest;
 
 /// <summary>
-///     https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/?envType=study-plan-v2&amp;
-///     envId=top-interview-150
+///     https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 ///     26. Remove Duplicates from Sorted Array
 /// </summary>
 internal class RemoveDuplicatesFromSortedArraySolution
