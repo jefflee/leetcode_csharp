@@ -17,7 +17,7 @@ internal class ConvertSortedArrayToBinarySearchTreeSolution
         return bstTree;
     }
 
-    private TreeNode? MakeBst(int[] nums, int start, int end)
+    private static TreeNode? MakeBst(int[] nums, int start, int end)
     {
         if (start > end)
         {
@@ -25,9 +25,11 @@ internal class ConvertSortedArrayToBinarySearchTreeSolution
         }
 
         var mid = (start + end) / 2;
-        var root = new TreeNode(nums[mid]);
-        root.left = MakeBst(nums, start, mid - 1);
-        root.right = MakeBst(nums, mid + 1, end);
+        var root = new TreeNode(nums[mid])
+        {
+            left = MakeBst(nums, start, mid - 1),
+            right = MakeBst(nums, mid + 1, end)
+        };
         return root;
     }
 
@@ -51,7 +53,7 @@ internal class ConvertSortedArrayToBinarySearchTreeTest
         (isEquivalentToExpected1 || isEquivalentToExpected2).Should().BeTrue();
     }
 
-    private bool Evaluate(Action a)
+    private static bool Evaluate(Action a)
     {
         try
         {
