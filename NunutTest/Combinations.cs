@@ -5,7 +5,6 @@ namespace LeetCodeNUnitTest;
 /// <summary>
 ///     https://leetcode.com/problems/combinations/description/
 ///     77. Combinations
-///     Solutions:
 /// </summary>
 internal class CombinationsSoution
 {
