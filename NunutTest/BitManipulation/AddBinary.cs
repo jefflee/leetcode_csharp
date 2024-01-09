@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Text;
 
-namespace LeetCodeNUnitTest;
+namespace LeetCodeNUnitTest.BitManipulation;
 
 /// <summary>
 ///     https://leetcode.com/problems/add-binary/description/
