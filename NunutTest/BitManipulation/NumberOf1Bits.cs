@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace LeetCodeNUnitTest;
+namespace LeetCodeNUnitTest.BitManipulation;
 
 /// <summary>
 ///     https://leetcode.com/problems/number-of-1-bits/description
@@ -10,7 +10,8 @@ internal class NumberOf1BitsSolution
 {
     public int HammingWeight(uint n)
     {
-        return Convert.ToString(n, 2).Count(bit => bit == '1');
+        return Convert.ToString(n, 2)
+            .Count(bit => bit == '1');
     }
 }
 
