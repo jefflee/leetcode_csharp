@@ -21,12 +21,40 @@ internal class ReverseBitsSolution
     }
 }
 
+/// <summary>
+///     https://leetcode.com/problems/reverse-bits/solutions/3813349/simple-c/
+/// </summary>
+internal class ReverseBitsShiftOperatorSolution
+{
+    public uint ReverseBits(uint n)
+    {
+        uint result = 0;
+
+        for (var i = 0; i < 32; i++)
+        {
+            result <<= 1;
+            result |= n & 1;
+            n >>= 1;
+        }
+
+        return result;
+    }
+}
+
 internal class ReverseBitsTest
 {
     [TestCaseSource(typeof(TestCases))]
     public void ReverseBitsSolutionTest(string n, uint expected)
     {
         var sut = new ReverseBitsSolution();
+        var output = sut.ReverseBits(Convert.ToUInt32(n, 2));
+        output.Should().Be(expected);
+    }
+
+    [TestCaseSource(typeof(TestCases))]
+    public void ReverseBitsShiftOperatorSolutionTest(string n, uint expected)
+    {
+        var sut = new ReverseBitsShiftOperatorSolution();
         var output = sut.ReverseBits(Convert.ToUInt32(n, 2));
         output.Should().Be(expected);
     }
