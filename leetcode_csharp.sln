@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCodeNUnitTest", "NunutT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Innova", "Innova", "{0C81F105-75C0-41E1-B495-290E0F42E177}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRankUNitTest", "HackerRankUNitTest\HackerRankUNitTest.csproj", "{73C9C913-4586-4672-A719-800FE617EE4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerRankUNitTest", "HackerRankUNitTest\HackerRankUNitTest.csproj", "{73C9C913-4586-4672-A719-800FE617EE4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRankProgram", "HackerRankProgram\HackerRankProgram.csproj", "{551CE1C6-C111-4164-B3DA-54BA4723DE34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +109,10 @@ Global
 		{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDD54DE6-A8D8-465C-94C1-1C0CFA21D49C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{551CE1C6-C111-4164-B3DA-54BA4723DE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{551CE1C6-C111-4164-B3DA-54BA4723DE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{551CE1C6-C111-4164-B3DA-54BA4723DE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{551CE1C6-C111-4164-B3DA-54BA4723DE34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
