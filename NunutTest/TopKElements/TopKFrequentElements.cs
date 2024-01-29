@@ -47,14 +47,6 @@ internal class TopKFrequentElementsPriorityQueueSolution
 
         return result;
     }
-
-    private class IntMaxCompare : IComparer<int>
-    {
-        public int Compare(int x, int y)
-        {
-            return y.CompareTo(x);
-        }
-    }
 }
 
 internal class TopKFrequentElementsTest
