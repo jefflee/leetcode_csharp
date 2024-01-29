@@ -62,7 +62,8 @@ internal class BinaryTreeZigzagLevelOrderTraversalSolution
 internal class BinaryTreeZigzagLevelOrderTraversalTest
 {
     [TestCaseSource(typeof(TestCases))]
-    public void BuyChocoSolutionTest(BinaryTreeZigzagLevelOrderTraversalSolution.TreeNode root,
+    public void BinaryTreeZigzagLevelOrderTraversalSolutionTest(
+        BinaryTreeZigzagLevelOrderTraversalSolution.TreeNode root,
         IList<IList<int>> expected)
     {
         var sut = new BinaryTreeZigzagLevelOrderTraversalSolution();
