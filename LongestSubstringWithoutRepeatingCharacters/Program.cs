@@ -6,6 +6,7 @@ namespace LongestSubstringWithoutRepeatingCharacters
     internal class Program
     {
         // https://leetcode.com/problems/longest-substring-without-repeating-characters/
+        // 3. Longest Substring Without Repeating Characters
 
         private static void Main(string[] args)
         {
@@ -15,7 +16,7 @@ namespace LongestSubstringWithoutRepeatingCharacters
             r = LengthOfLongestSubstring_sol3_slicingWindow_optimized("bbbbb");
             Console.WriteLine(r); // 1
 
-            r = LengthOfLongestSubstring_sol2_slicingWindow("pwwkew");
+            r = LengthOfLongestSubstring_sol2_slidingWindow("pwwkew");
             Console.WriteLine(r); // 3
 
             r = LengthOfLongestSubstring_sol3_slicingWindow_optimized("aab");
@@ -26,7 +27,7 @@ namespace LongestSubstringWithoutRepeatingCharacters
         {
             var maxLength = 0;
             // For each i, I need to find the longest substring without repeating characters.
-            // There is a waiste of time here, because I don't need to start from j = i + 1 next time.
+            // There is a waste of time here, because I don't need to start from j = i + 1 next time.
             // The next sliding window improve this.
             for (var i = 0; i < s.Length; i++)
             {
@@ -57,7 +58,7 @@ namespace LongestSubstringWithoutRepeatingCharacters
             return maxLength;
         }
 
-        public static int LengthOfLongestSubstring_sol2_slicingWindow(string s)
+        public static int LengthOfLongestSubstring_sol2_slidingWindow(string s)
         {
             var charDic = new HashSet<char>();
 
