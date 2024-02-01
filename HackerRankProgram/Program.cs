@@ -1,3 +1,7 @@
-﻿internal class Result
+﻿internal class MainProgram
 {
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World!");
+    }
 }
