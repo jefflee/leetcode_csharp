@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace LeetCodeNUnitTest;
+namespace LeetCodeNUnitTest.Backtracking;
 
 /// <summary>
 ///     https://leetcode.com/problems/permutations-ii/description/
