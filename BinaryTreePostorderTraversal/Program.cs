@@ -1,26 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BinaryTreePostorderTraversal
 {
-    class Program
+    internal class Program
     {
-        // https://leetcode.com/problems/binary-tree-postorder-traversal/
-
-        public class TreeNode
+        private static void Main(string[] args)
         {
-            public int val;
-            public TreeNode left;
-            public TreeNode right;
-            public TreeNode(int x) { val = x; }
-        }
-
-        static void Main(string[] args)
-        {
-
         }
 
         public IList<int> PostorderTraversal_solution1_iteration(TreeNode root)
@@ -30,14 +16,14 @@ namespace BinaryTreePostorderTraversal
                 return new List<int>();
             }
 
-            Stack<TreeNode> stack = new Stack<TreeNode>();
-            LinkedList<int> resultList = new LinkedList<int>();
+            var stack = new Stack<TreeNode>();
+            var resultList = new LinkedList<int>();
 
             stack.Push(root);
             while (stack.Count > 0)
             {
-                TreeNode currentNode = stack.Pop();
-                resultList.AddFirst(currentNode.val);
+                var currentNode = stack.Pop();
+                resultList.AddFirst(currentNode.val); // Pay attention here. Add to the list first.
 
                 if (currentNode.left != null)
                 {
@@ -71,13 +57,26 @@ namespace BinaryTreePostorderTraversal
             {
                 traversalTreeByRecursivelyImpl(node.left, resultList);
             }
-            
+
             if (node.right != null)
             {
                 traversalTreeByRecursivelyImpl(node.right, resultList);
             }
 
             resultList.Add(node.val);
+        }
+        // https://leetcode.com/problems/binary-tree-postorder-traversal/
+
+        public class TreeNode
+        {
+            public TreeNode left;
+            public TreeNode right;
+            public int val;
+
+            public TreeNode(int x)
+            {
+                val = x;
+            }
         }
     }
 }
